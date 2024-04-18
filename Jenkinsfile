@@ -5,11 +5,6 @@ pipeline {
   maven 'mvn'
 }
 stages {
-    stage ('clone the job'){
-        steps{
-        git 'https://github.com/anilkumar3577/JavaWebCalculator.git'
-        }
-    }
     stage ('build the job'){
         steps{
         sh 'mvn package'
