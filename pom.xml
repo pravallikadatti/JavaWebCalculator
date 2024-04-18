@@ -33,4 +33,15 @@
     <url>http://binary.ibm.com/nexus/content/repositories/releases</url>
   </repository>
 </distributionManagement>
+  <build>
+  <pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.7.0.1746</version>
+      </plugin>
+    </plugins>
+  </pluginManagement>
+</build>
 </project>
