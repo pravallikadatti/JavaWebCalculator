@@ -32,6 +32,7 @@ stages {
     }
     stage('running the docker container'){
         steps{
+            sh 'docker stop con1 && docker rm con1'
             sh 'docker run -dt --name con1 -p 8084:8080 anilkumare/calc '
         }
     }
