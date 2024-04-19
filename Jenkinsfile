@@ -28,7 +28,7 @@ stages {
             sh 'docker tag calc anilkumare/calc'
         }
     }
-    stage('tagging the docker image'){
+    stage('pushing the docker image'){
         steps{
             sh 'docker push anilkumare/calc'
         }
