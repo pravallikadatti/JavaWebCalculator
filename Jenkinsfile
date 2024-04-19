@@ -16,16 +16,12 @@ stages {
             sh 'docker build -t calc .'
         }
     }
-    stage('logging into the docker hub'){
-        steps{
-        withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
-          sh 'docker login -u DOCKER_USERNAME -p DOCKER_PASSWORD'
-}
-        }
-    }
+
     stage('tagging the docker image'){
         steps{
+            withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
             sh 'docker tag calc anilkumare/calc'
+        }
         }
     }
     stage('pushing the docker image'){
