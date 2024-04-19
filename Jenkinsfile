@@ -32,7 +32,7 @@ stages {
     }
     stage('running the docker container'){
         steps{
-            sh 'docker run -dt --name con -p 8083:8080 anilkumare/calc '
+            sh 'docker run -dt --name con1 -p 8084:8080 anilkumare/calc '
         }
     }
 }
