@@ -30,5 +30,10 @@ stages {
             sh 'docker push anilkumare/calc'
         }
     }
+    stage('running the docker container'){
+        steps{
+            sh 'docker run -dt --name con -p 8083:8080 anilkumare/calc '
+        }
+    }
 }
 }
