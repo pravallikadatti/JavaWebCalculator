@@ -20,7 +20,8 @@ stages {
     stage('tagging the docker image'){
         steps{
             withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'DOCKER_PASSWORD', usernameVariable: 'DOCKER_USERNAME')]) {
-            sh 'docker tag calc anilkumare/calc'
+            
+            sh 'docker login -u DOCKER_USERNAME -p DOCKER_PASSWORD && docker tag calc anilkumare/calc'
         }
         }
     }
