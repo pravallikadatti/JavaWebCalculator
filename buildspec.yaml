@@ -1,0 +1,13 @@
+version: 0.2
+        
+phases:
+  install:
+    runtime-versions:
+      java: 1.8
+    # steps:
+  build:
+    commands:
+      - mvn package
+  post_build:
+    commands:
+      - echo "pipeline created successfully"
