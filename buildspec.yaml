@@ -6,8 +6,8 @@ phases:
       java: 1.8
 env:
   parameter-store:
-    DOCKER_USERNAME: java/dockerhub/username
-    DOCKER_PASSWORD: java/dockerhub/password
+    DOCKER_USERNAME: /Java/dockerhub_credentials/username
+    DOCKER_PASSWORD: /Java/dockerhub_credentials/password
 
     # steps:
   build:
