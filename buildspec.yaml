@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: 1.8
+      java: 11
 env:
   parameter-store:
     DOCKER_USERNAME: /Java/dockerhub_credentials/username
