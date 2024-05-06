@@ -7,7 +7,7 @@ env:
 phases:
   install:
     runtime-versions:
-      java: 11
+      java: latest
       
   build:
     commands:
