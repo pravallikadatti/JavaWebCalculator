@@ -4,17 +4,17 @@ phases:
   install:
     runtime-versions:
       java: 11
-env:
-  parameter-store:
-    DOCKER_USERNAME: /Java/dockerhub_credentials/username
-    DOCKER_PASSWORD: /Java/dockerhub_credentials/password
-build:
-  commands:
-    - mvn package
-    - docker build -t cal .
-    - docker tag cal anilkumare/cal
-    - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
-    - docker push anilkumare/cal
-post_build:
+  env:
+    parameter-store:
+      DOCKER_USERNAME: /Java/dockerhub_credentials/username
+      DOCKER_PASSWORD: /Java/dockerhub_credentials/password
+  build:
     commands:
-      - echo "pipeline created successfully"
+      - mvn package
+      - docker build -t cal .
+      - docker tag cal anilkumare/cal
+      - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+      - docker push anilkumare/cal
+  post_build:
+      commands:
+        - echo "pipeline created successfully"
