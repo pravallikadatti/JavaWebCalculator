@@ -1,13 +1,13 @@
 version: 0.2
-        
+
+env:
+  parameter-store:
+    DOCKER_USERNAME: /Java/dockerhub_credentials/username
+    DOCKER_PASSWORD: /Java/dockerhub_credentials/password
 phases:
   install:
     runtime-versions:
       java: 11
-  env:
-    parameter-store:
-      DOCKER_USERNAME: /Java/dockerhub_credentials/username
-      DOCKER_PASSWORD: /Java/dockerhub_credentials/password
   build:
     commands:
       - mvn package
