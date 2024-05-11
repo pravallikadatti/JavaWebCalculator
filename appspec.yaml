@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+hooks:
+  BeforeInstall:
+    - location: Scripts/
+  AfterInstall:
+    - location: Scripts/RunResourceTests.sh
+      timeout: 180
+  ApplicationStart:
+    - location: 
+      timeout: 3600
