@@ -3,11 +3,14 @@ os: linux
 hooks:
   BeforeInstall:
     - location: Scripts/starting.sh
+      runas: root
   AfterInstall:
     - location: Scripts/started.sh
       timeout: 180
+      runas: root
   ApplicationStart:
     - location: Scripts/startup.sh
       timeout: 3600
+      runas: root
 
 
