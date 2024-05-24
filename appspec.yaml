@@ -2,13 +2,13 @@ version: 0.0
 os: linux
 runas: root
 hooks:
-  BeforeInstall:
-    - location: Scripts/starting.sh
   AfterInstall:
     - location: Scripts/started.sh
       timeout: 180
+      runas: root
   ApplicationStart:
     - location: Scripts/startup.sh
       timeout: 360
+      runas: root
 
 
