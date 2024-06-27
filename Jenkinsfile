@@ -21,7 +21,7 @@ stages {
     stage('deploy the code'){
         steps{
             sshagent(['tomcatt']) {
-               sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/pipeline/JavaWebCalculator/target/webapp-0.1.war' 		
+               sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/pipeline/JavaWebCalculator/target/webapp-0.1.war /home/ec2-user/apache-tomcat-8.5.100/webapps' 		
 
 }
         }
