@@ -12,7 +12,7 @@ stages {
     }
     stage('test the code'){
         steps{
-            withSonarQubeEnv(credentialsId: 'sonar') {
+            withSonarQubeEnv('sonar') {
                 sh 'mvn sonar:sonar'
 }
         }
