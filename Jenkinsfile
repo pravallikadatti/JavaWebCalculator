@@ -13,7 +13,7 @@ stages {
     stage('test the code'){
         steps{
             withSonarQubeEnv('sonar') {
-                sh 'mvn sonar:sonar'
+                sh 'mvn -f /var/lib/jenkins/workspace/pipeline/JavaWebCalculator/target/webapp-0.1.war sonar:sonar'
 }
         }
     }
