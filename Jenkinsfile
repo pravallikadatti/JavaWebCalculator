@@ -17,6 +17,12 @@ stages {
 }
         }
     }
+    stages {
+    stage('transfer the code'){
+        steps{
+            
+        }
+    }
     
 }  
 }
