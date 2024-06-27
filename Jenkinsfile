@@ -10,6 +10,13 @@ stages {
             sh 'mvn package'
         }
     }
+    stage('test the code'){
+        steps{
+            withSonarQubeEnv(credentialsId: 'sonar') {
+                sh 'mvn sonar:sonar'
+}
+        }
+    }
     
 }  
 }
