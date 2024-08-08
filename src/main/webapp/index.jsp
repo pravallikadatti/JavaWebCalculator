@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Calculators</title>
+<title>Webhooks</title>
 </head>
 <body>
-<h1 style="text_align=center">Calculators</h1>
+<h1 style="text_align=center">Webhooks</h1>
       <form action="firstHomePage" method="get">
 <label>first number:</label>
 <input type="text" name="n1" />
